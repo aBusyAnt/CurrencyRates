@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3JY-b2-peP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="b4K-jw-B0k">
+            <objects>
+                <navigationController id="3JY-b2-peP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4cy-uP-ajj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kWe-gC-GfH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-WK-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyRates" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="金额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyR-X6-l3y">
+                                <rect key="frame" x="20" y="205" width="49" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="2SM-up-2yk"/>
+                                    <constraint firstAttribute="height" constant="21" id="JuV-rW-Gab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcd-Mj-kJD">
+                                <rect key="frame" x="89" y="201" width="491" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9H-E8-Lyx">
+                                <rect key="frame" x="20" y="274" width="230" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qyp-Mn-b49"/>
+                                </constraints>
+                                <state key="normal" title="人民币"/>
+                                <connections>
+                                    <action selector="fromButtonPressedHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0Z-eD-anI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvg-TC-bdY">
+                                <rect key="frame" x="20" y="83" width="560" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CXg-xL-3tc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkx-kr-yrc">
+                                <rect key="frame" x="185" y="381" width="230" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="gsk-aC-KTf"/>
+                                    <constraint firstAttribute="width" constant="230" id="vjl-xg-H7O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <state key="normal" title="换算">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q66-36-6ZW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxj-fV-G7f">
+                                <rect key="frame" x="20" y="54" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6sB-Pb-nh3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-BX-dJa">
+                                <rect key="frame" x="350" y="274" width="230" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xH7-ej-bvC"/>
+                                </constraints>
+                                <state key="normal" title="美元"/>
+                                <connections>
+                                    <action selector="toButtonPressedHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbH-IU-tG5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tyR-X6-l3y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1UE-fF-CFI"/>
+                            <constraint firstAttribute="trailing" secondItem="3r0-BX-dJa" secondAttribute="trailing" constant="20" id="6zB-Qu-qef"/>
+                            <constraint firstAttribute="trailing" secondItem="qcd-Mj-kJD" secondAttribute="trailing" constant="20" id="7Hq-sx-fhF"/>
+                            <constraint firstAttribute="trailing" secondItem="Nxj-fV-G7f" secondAttribute="trailing" constant="20" id="83L-8Z-H6S"/>
+                            <constraint firstItem="3r0-BX-dJa" firstAttribute="width" secondItem="V9H-E8-Lyx" secondAttribute="width" id="BaK-9y-ZiL"/>
+                            <constraint firstItem="qvg-TC-bdY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="CST-5L-GM3"/>
+                            <constraint firstItem="lkx-kr-yrc" firstAttribute="top" secondItem="3r0-BX-dJa" secondAttribute="bottom" constant="77" id="Ixp-Fq-r8w"/>
+                            <constraint firstItem="qcd-Mj-kJD" firstAttribute="leading" secondItem="tyR-X6-l3y" secondAttribute="trailing" constant="20" id="QCg-EU-hF9"/>
+                            <constraint firstItem="lkx-kr-yrc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RNy-Px-prv"/>
+                            <constraint firstItem="Nxj-fV-G7f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Uto-qV-Ais"/>
+                            <constraint firstItem="Nxj-fV-G7f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="ZE0-E2-eul"/>
+                            <constraint firstItem="3r0-BX-dJa" firstAttribute="leading" secondItem="V9H-E8-Lyx" secondAttribute="trailing" constant="100" id="cCA-q4-szb"/>
+                            <constraint firstItem="qcd-Mj-kJD" firstAttribute="centerY" secondItem="tyR-X6-l3y" secondAttribute="centerY" id="h8Q-3G-M9g"/>
+                            <constraint firstItem="tyR-X6-l3y" firstAttribute="top" secondItem="qvg-TC-bdY" secondAttribute="bottom" constant="62" id="mRy-7Z-MLJ"/>
+                            <constraint firstItem="V9H-E8-Lyx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mhl-oq-lpi"/>
+                            <constraint firstItem="qvg-TC-bdY" firstAttribute="top" secondItem="Nxj-fV-G7f" secondAttribute="bottom" constant="8" id="qDu-xm-E3Y"/>
+                            <constraint firstItem="V9H-E8-Lyx" firstAttribute="top" secondItem="qcd-Mj-kJD" secondAttribute="bottom" constant="43" id="qwX-uY-GNY"/>
+                            <constraint firstAttribute="trailing" secondItem="qvg-TC-bdY" secondAttribute="trailing" constant="20" id="rdd-bW-hiO"/>
+                            <constraint firstItem="3r0-BX-dJa" firstAttribute="centerY" secondItem="V9H-E8-Lyx" secondAttribute="centerY" id="zRu-HA-1Fm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DJ7-SX-tY3"/>
+                    <connections>
+                        <outlet property="amountField" destination="qcd-Mj-kJD" id="00C-v8-5Hj"/>
+                        <outlet property="fromButton" destination="V9H-E8-Lyx" id="N7M-aw-Kjg"/>
+                        <outlet property="resultLabel" destination="qvg-TC-bdY" id="82Y-dg-JOc"/>
+                        <outlet property="timeLabel" destination="Nxj-fV-G7f" id="4vd-7X-FGN"/>
+                        <outlet property="toButton" destination="3r0-BX-dJa" id="PhB-AQ-dL8"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="qGR-jr-kq4"/>
+                        <segue destination="42F-Uc-hlz" kind="show" identifier="selectTypeSegueIdentifier" id="Qxe-Z8-3QA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="348"/>
+        </scene>
+        <!--Curency Type Select View Controller-->
+        <scene sceneID="pt0-DY-vN2">
+            <objects>
+                <tableViewController id="42F-Uc-hlz" customClass="CurencyTypeSelectViewController" customModule="CurrencyRates" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L4L-r8-N6F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hOZ-lq-Bfj">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hOZ-lq-Bfj" id="IAy-Y8-mhG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="42F-Uc-hlz" id="WKp-no-5dn"/>
+                            <outlet property="delegate" destination="42F-Uc-hlz" id="Z2r-wq-Q4f"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9a-Rk-4ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="1225"/>
+        </scene>
+    </scenes>
+</document>
