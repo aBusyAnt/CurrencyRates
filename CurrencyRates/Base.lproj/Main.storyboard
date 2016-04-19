@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-WK-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="-305"/>
+            <point key="canvasLocation" x="-746" y="-973"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvg-TC-bdY">
-                                <rect key="frame" x="20" y="83" width="560" height="60"/>
+                                <rect key="frame" x="89" y="83" width="491" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="CXg-xL-3tc"/>
                                 </constraints>
@@ -103,6 +103,17 @@
                                     <action selector="toButtonPressedHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbH-IU-tG5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="huopbi.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1K-Uc-QTh">
+                                <rect key="frame" x="10" y="83" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Uly-sl-rLk"/>
+                                    <constraint firstAttribute="height" constant="60" id="ccT-fh-q2D"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-q5-7nm">
+                                <rect key="frame" x="272" y="261" width="56" height="56"/>
+                                <state key="normal" image="convert.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -115,9 +126,12 @@
                             <constraint firstItem="lkx-kr-yrc" firstAttribute="top" secondItem="3r0-BX-dJa" secondAttribute="bottom" constant="77" id="Ixp-Fq-r8w"/>
                             <constraint firstItem="qcd-Mj-kJD" firstAttribute="leading" secondItem="tyR-X6-l3y" secondAttribute="trailing" constant="20" id="QCg-EU-hF9"/>
                             <constraint firstItem="lkx-kr-yrc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RNy-Px-prv"/>
+                            <constraint firstItem="G1K-Uc-QTh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Rf3-fD-VPK"/>
                             <constraint firstItem="Nxj-fV-G7f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Uto-qV-Ais"/>
+                            <constraint firstItem="qvg-TC-bdY" firstAttribute="centerY" secondItem="G1K-Uc-QTh" secondAttribute="centerY" id="YYZ-fj-8kb"/>
                             <constraint firstItem="Nxj-fV-G7f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="ZE0-E2-eul"/>
                             <constraint firstItem="3r0-BX-dJa" firstAttribute="leading" secondItem="V9H-E8-Lyx" secondAttribute="trailing" constant="100" id="cCA-q4-szb"/>
+                            <constraint firstItem="G1K-Uc-QTh" firstAttribute="top" secondItem="Nxj-fV-G7f" secondAttribute="bottom" constant="8" id="gzL-3b-yNQ"/>
                             <constraint firstItem="qcd-Mj-kJD" firstAttribute="centerY" secondItem="tyR-X6-l3y" secondAttribute="centerY" id="h8Q-3G-M9g"/>
                             <constraint firstItem="tyR-X6-l3y" firstAttribute="top" secondItem="qvg-TC-bdY" secondAttribute="bottom" constant="62" id="mRy-7Z-MLJ"/>
                             <constraint firstItem="V9H-E8-Lyx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mhl-oq-lpi"/>
@@ -125,7 +139,14 @@
                             <constraint firstItem="V9H-E8-Lyx" firstAttribute="top" secondItem="qcd-Mj-kJD" secondAttribute="bottom" constant="43" id="qwX-uY-GNY"/>
                             <constraint firstAttribute="trailing" secondItem="qvg-TC-bdY" secondAttribute="trailing" constant="20" id="rdd-bW-hiO"/>
                             <constraint firstItem="3r0-BX-dJa" firstAttribute="centerY" secondItem="V9H-E8-Lyx" secondAttribute="centerY" id="zRu-HA-1Fm"/>
+                            <constraint firstItem="qvg-TC-bdY" firstAttribute="leading" secondItem="G1K-Uc-QTh" secondAttribute="trailing" constant="19" id="zc6-Vx-obU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CST-5L-GM3"/>
+                                <exclude reference="qDu-xm-E3Y"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="DJ7-SX-tY3"/>
                     <connections>
@@ -140,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="376" y="348"/>
+            <point key="canvasLocation" x="404" y="-868"/>
         </scene>
         <!--Curency Type Select View Controller-->
         <scene sceneID="pt0-DY-vN2">
@@ -168,7 +189,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9a-Rk-4ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="1225"/>
+            <point key="canvasLocation" x="1139" y="-843"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="convert.png" width="56" height="56"/>
+        <image name="huopbi.png" width="56" height="56"/>
+    </resources>
 </document>

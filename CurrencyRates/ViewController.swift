@@ -24,8 +24,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
     var result: ExchangeResult?
 
     struct ExchangeObject {
-        var fromType: CurrencyType
-        var toType: CurrencyType
+        var fromType: CurrencyType?
+        var toType: CurrencyType?
     }
     var currentSelectedObject: ExchangeObject?
 
@@ -49,10 +49,18 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBAction func exchange(sender: UIButton) {
 
     }
-    // MARK: Navigation
-
+    // MARK: Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
     }
+
+    func performUnwindSegue(segue: UIStoryboardSegue) {
+        if segue.identifier == CurencyTypeSelectViewController.UnwindSegue {
+            if (segue.sourceViewController as! CurencyTypeSelectViewController).selectFor
+            currentSelectedObject?.fromType = (segue.sourceViewController as! CurencyTypeSelectViewController).selectedType
+        }
+    }
+
 
     //MARK: UITextField Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -64,5 +72,28 @@ class ViewController: UIViewController,UITextFieldDelegate {
         print(currencyTypes)
 //        timeLabel.text = "更新时间: " + result!.update
     }
-   }
+
+    //MARK: Net Request
+    func exchange() {
+        let urlString = "http://api.k780.com:88/?app=finance.rate_curlist&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json"
+        let encodedUrlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let session = NSURLSession.sharedSession()
+        let request = NSURLRequest(URL: NSURL(string:encodedUrlString!)!)
+        let task = session.dataTaskWithRequest(request) { (data, response, error) in
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                if let rs = json.objectForKey("result") as? NSArray {
+                    self.cacheTypes(rs)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                    }
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        task.resume()
+    }
+
+}
 

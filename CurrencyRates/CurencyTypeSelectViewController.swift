@@ -12,10 +12,16 @@ struct CurrencyType {
     var code: String
     var name: String
 }
+enum SelectFor{
+    case From
+    case To
+}
 
 class CurencyTypeSelectViewController: UITableViewController {
+    static let UnwindSegue = "UnwindSelect"
     var currencyTypes = [CurrencyType]()
     var selectedType: CurrencyType?
+    var selectFor = SelectFor.From
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,7 +62,10 @@ class CurencyTypeSelectViewController: UITableViewController {
     }
     //MARK: UITableDelegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        dismissViewControllerAnimated(true, completion: nil)
+//        dismissViewControllerAnimated(true, completion: nil)
+
+        selectedType = currencyTypes[indexPath.row]
+        performSegueWithIdentifier(CurencyTypeSelectViewController.UnwindSegue, sender: nil)
     }
 
     //MARK: Net Request
